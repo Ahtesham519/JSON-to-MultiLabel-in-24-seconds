@@ -79,6 +79,18 @@ print('%0.2f min: Finish converting label' %((time.time() - script_Start_time) /
 
 for data in [validation_label, train_label, test]:
   print(data.shape)
+  
+#save as numpy
+dummy_label_col = pd.DataFrame(columns = dummy_label_col)
+
+dummy_label_col.head()
+
+train_label = pd.DataFrame(data = train_label, columns = list(mlb.classes_))
+train_label.head()
+validation_label = pd.DataFrame(data = validation_label, columns = list(mlb.classes_))
+validation_label.head()
+
+
 
 
 
